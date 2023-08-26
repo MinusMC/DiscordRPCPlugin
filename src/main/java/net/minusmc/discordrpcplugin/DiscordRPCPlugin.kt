@@ -3,7 +3,8 @@ package me.toidicakhia.examplemod
 import net.ccbluex.liquidbounce.plugin.Plugin
 import net.ccbluex.liquidbounce.event.EventTarget
 import net.ccbluex.liquidbounce.event.ClientShutdownEvent
-import net.minusmc.discordrpcplugin.DiscordRPCPlugin
+import net.minusmc.discordrpcplugin.ClientRichPresence
+import kotlin.concurrent.thread
 
 class DiscordRPCPlugin: Plugin("DiscordRPCPlugin", "dev") {
 
