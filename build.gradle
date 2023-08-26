@@ -32,7 +32,7 @@ minecraft {
     runDir = "run"
     mappings = "stable_22"
     makeObfSourceJar = false
-    clientJvmArgs += ["-Dfml.coreMods.load=net.ccbluex.liquidbounce.injection.forge.TransformerLoader", "-Ddev-mode"]
+    //clientJvmArgs += ["-Dfml.coreMods.load=net.ccbluex.liquidbounce.injection.forge.TransformerLoader", "-Ddev-mode"]
 }
 
 configurations {
@@ -41,8 +41,8 @@ configurations {
 }
 
 dependencies {
-    include "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile fileTree(include: ["*.jar"], dir: "libs")
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    include("com.jagrosh:DiscordIPC:0.4")
 }
 
 shadowJar {
