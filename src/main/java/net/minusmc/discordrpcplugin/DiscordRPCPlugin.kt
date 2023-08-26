@@ -4,6 +4,7 @@ import net.ccbluex.liquidbounce.plugin.Plugin
 import net.ccbluex.liquidbounce.event.EventTarget
 import net.ccbluex.liquidbounce.event.ClientShutdownEvent
 import net.minusmc.discordrpcplugin.ClientRichPresence
+import net.ccbluex.liquidbounce.utils.ClientUtils
 import kotlin.concurrent.thread
 
 class DiscordRPCPlugin: Plugin("DiscordRPCPlugin", "dev") {
