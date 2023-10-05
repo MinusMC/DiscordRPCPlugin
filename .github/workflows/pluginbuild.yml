@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ScriptsPlugin
-          path: build/libs/discordrpcplugin-dev.jar
+          path: build/libs/discordrpcplugin-20231005.jar

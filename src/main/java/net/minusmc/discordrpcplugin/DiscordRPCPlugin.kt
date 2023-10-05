@@ -1,13 +1,12 @@
-package me.toidicakhia.examplemod
+package net.minusmc.discordrpcplugin
 
-import net.ccbluex.liquidbounce.plugin.Plugin
-import net.ccbluex.liquidbounce.event.EventTarget
-import net.ccbluex.liquidbounce.event.ClientShutdownEvent
-import net.minusmc.discordrpcplugin.ClientRichPresence
-import net.ccbluex.liquidbounce.utils.ClientUtils
+import net.minusmc.minusbounce.plugin.Plugin
+import net.minusmc.minusbounce.event.EventTarget
+import net.minusmc.minusbounce.event.ClientShutdownEvent
+import net.minusmc.minusbounce.utils.ClientUtils
 import kotlin.concurrent.thread
 
-class DiscordRPCPlugin: Plugin("DiscordRPCPlugin", "dev") {
+class DiscordRPCPlugin: Plugin("DiscordRPCPlugin", "20231005") {
 
 	lateinit var clientRichPresence: ClientRichPresence
 
@@ -30,25 +29,25 @@ class DiscordRPCPlugin: Plugin("DiscordRPCPlugin", "dev") {
 	}
 
 	// } else if (extendedModMode) {
-                    //         val rpc = LiquidBounce.clientRichPresence
-                    //         rpc.showRichPresenceValue = when (val state = !rpc.showRichPresenceValue) {
-                    //             false -> {
-                    //                 rpc.shutdown()
-                    //                 false
-                    //             }
-                    //             true -> {
-                    //                 var value = true
-                    //                 thread {
-                    //                     value = try {
-                    //                         rpc.setup()
-                    //                         true
-                    //                     } catch (throwable: Throwable) {
-                    //                         ClientUtils.getLogger().error("Failed to setup Discord RPC.", throwable)
-                    //                         false
-                    //                     }
-                    //                 }
-                    //                 value
-                    //             }
-                    //         }
-                    //     } 
+    //         val rpc = LiquidBounce.clientRichPresence
+    //         rpc.showRichPresenceValue = when (val state = !rpc.showRichPresenceValue) {
+    //             false -> {
+    //                 rpc.shutdown()
+    //                 false
+    //             }
+    //             true -> {
+    //                 var value = true
+    //                 thread {
+    //                     value = try {
+    //                         rpc.setup()
+    //                         true
+    //                     } catch (throwable: Throwable) {
+    //                         ClientUtils.getLogger().error("Failed to setup Discord RPC.", throwable)
+    //                         false
+    //                     }
+    //                 }
+    //                 value
+    //             }
+    //         }
+    //     } 
 }
