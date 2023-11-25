@@ -51,7 +51,7 @@ class ClientRichPresence : MinecraftInstance() {
             })
             ipcClient?.connect()
         } catch (e: Throwable) {
-            ClientUtils.getLogger().error("Failed to setup Discord RPC.", e)
+            ClientUtils.logger.error("Failed to setup Discord RPC.", e)
         }
 
     }
@@ -70,7 +70,9 @@ class ClientRichPresence : MinecraftInstance() {
         builder.setState("Playing Minecraft")
 
         if (mc.isIntegratedServerRunning || serverData != null) 
-            builder.setSmallImage(assets["sus"], "${if (mc.isIntegratedServerRunning || serverData == null) "Lonely.." else serverData.serverIP}")
+            builder.setSmallImage(assets["sus"],
+                if (mc.isIntegratedServerRunning || serverData == null) "Lonely.." else serverData.serverIP
+            )
         else
             builder.setSmallImage(assets["sus"], "Enabled ${MinusBounce.moduleManager.modules.count { it.state }}/${MinusBounce.moduleManager.modules.size}.")
 
@@ -84,7 +86,7 @@ class ClientRichPresence : MinecraftInstance() {
         try {
             ipcClient?.close()
         } catch (e: Throwable) {
-            ClientUtils.getLogger().error("Failed to close Discord RPC.", e)
+            ClientUtils.logger.error("Failed to close Discord RPC.", e)
         }
     }
 

@@ -42,7 +42,7 @@ configurations {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     include("com.jagrosh:DiscordIPC:0.4")
-    compile "com.github.MinusMCNetwork:MinusBounce:0.1.1"
+    compile "com.github.MinusMCNetwork:MinusBounce:082af77b18"
 }
 
 shadowJar {
