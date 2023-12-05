@@ -41,7 +41,7 @@ configurations {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    include("com.github.jagrosh:DiscordIPC:a8d6631cc9")
+    include("com.github.jagrosh:DiscordIPC:0.4")
     compile "com.github.MinusMCNetwork:MinusBounce:082af77b18"
 }
 

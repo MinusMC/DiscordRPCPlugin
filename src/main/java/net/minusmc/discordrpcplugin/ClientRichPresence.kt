@@ -64,7 +64,7 @@ class ClientRichPresence : MinecraftInstance() {
         builder.setStartTimestamp(timestamp)
 
         if (assets.containsKey("logo"))
-            builder.setLargeImage("https://i.imgur.com/Wputa6T.png", "MinusBounce " + MinusBounce.CLIENT_VERSION)
+            builder.setLargeImage("https://github.com/MinusMCNetwork/MinusBounce/raw/main/src/main/resources/assets/minecraft/minusbounce/big.png", "MinusBounce ver " + MinusBounce.CLIENT_VERSION)
 
         val serverData = mc.currentServerData
 
@@ -73,7 +73,7 @@ class ClientRichPresence : MinecraftInstance() {
 
         if (mc.isIntegratedServerRunning || serverData != null) 
             builder.setSmallImage(assets["sus"],
-                if (mc.isIntegratedServerRunning || serverData == null) "Lonely.." else serverData.serverIP
+                if (mc.isIntegratedServerRunning || serverData == null) "Singleplayer" else serverData.serverIP
             )
         else
             builder.setSmallImage(assets["sus"], "Enabled ${MinusBounce.moduleManager.modules.count { it.state }}/${MinusBounce.moduleManager.modules.size}.")
