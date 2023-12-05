@@ -30,16 +30,19 @@ class ClientRichPresence : MinecraftInstance() {
             running = true
 
             loadConfiguration()
+            println(appID)
 
             ipcClient = IPCClient(appID)
             ipcClient?.setListener(object : IPCListener {
                 override fun onReady(client: IPCClient?) {
+                    running = true
                     thread {
                         while (running) {
                             update()
                             try {
                                 Thread.sleep(1000L)
-                            } catch (ignored: InterruptedException) {}
+                            } catch (ignored: InterruptedException) {
+                            }
                         }
                     }
                 }
@@ -47,7 +50,6 @@ class ClientRichPresence : MinecraftInstance() {
                 override fun onClose(client: IPCClient?, json: JSONObject?) {
                     running = false
                 }
-
             })
             ipcClient?.connect()
         } catch (e: Throwable) {
@@ -91,7 +93,7 @@ class ClientRichPresence : MinecraftInstance() {
     }
 
     private fun loadConfiguration() {
-        appID = 1131467194056855703
+        appID = 1170895865657958460
         assets["logo"] = "logo"
         assets["sus"] = "sus"
     }
